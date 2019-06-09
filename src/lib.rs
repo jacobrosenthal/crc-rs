@@ -92,6 +92,7 @@ pub use self::crc64::Hasher64;
 ///   - Used internally.
 pub enum CalcType {
     Normal,
+    None,
     Reverse,
     Compat,
 }

@@ -1,17 +1,3 @@
-/// The type of calculations to run in `update()`.
-/// - **Normal**: Forward calculation, MSB.
-///   - Used with `new_custom()`.
-/// - **Reverse**: Reverse calculation, LSB.
-///   - Used with `new_custom()`.
-/// - **Compat**: Initial value is reflected in and out. The CRC calculation is *Reverse*.
-///   - Used internally
-pub enum CalcType {
-    Normal,
-    None,
-    Reverse,
-    Compat,
-}
-
 /// Builds a CRC16 table using the standard or reflected CRC method.
 /// If reflect==true, flip the individual byte bitwise, then flip the 16bit table value bitwise
 pub fn make_table_crc16(poly: u16, reflect: bool) -> [u16; 256] {
